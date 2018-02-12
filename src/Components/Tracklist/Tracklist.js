@@ -5,13 +5,13 @@ import "./Tracklist.css";
 
 class TrackList extends Component {
     render() {
-        const { tracks, onAdd, onRemove } = this.props;
+        const { tracks, onAdd, onRemove, isRemoval } = this.props;
 
         return (
             <div className="TrackList">
                 {/*<!-- You will add a map method that renders a set of Track components  -->*/}
                 {tracks.map(track => {
-                    return <Track key={track.id} track={track} onAdd={onAdd} onRemove={onRemove} />;
+                    return <Track key={track.id} track={track} onAdd={onAdd} onRemove={onRemove} isRemoval={isRemoval} />;
                 })}
             </div>
         );
@@ -21,7 +21,12 @@ class TrackList extends Component {
 TrackList.propTypes = {
     tracks: PropTypes.array,
     onAdd: PropTypes.func,
-    onRemove: PropTypes.func
+    onRemove: PropTypes.func,
+    isRemoval: PropTypes.bool
+};
+
+TrackList.defaultProps = {
+    isRemoval: false
 };
 
 export default TrackList;

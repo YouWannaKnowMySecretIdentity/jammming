@@ -26,7 +26,7 @@ class SearchBar extends Component {
 
     handleKeyPress(e) {
         if (e.key === "Enter") {
-            this.props.onSearch(this.state.term);
+            this.search();
         }
     }
 

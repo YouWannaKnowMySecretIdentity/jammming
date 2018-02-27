@@ -64,9 +64,6 @@ class App extends Component {
                 <h1>Ja<span className="highlight">mmm</span>ing</h1>
                 <div className="App">
                     <SearchBar onSearch={this.search} />
-                    <SearchBar onSearch={this.search} />
-                    <SearchBar onSearch={this.search} />
-                    <SearchBar onSearch={this.search} />
                     <div>Ben c</div>
                     <div className="App-playlist">
                         <SearchResults searchResults={searchResults} onAdd={this.addTrack} />
